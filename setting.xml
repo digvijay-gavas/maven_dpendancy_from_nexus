@@ -5,25 +5,16 @@
   -->
     <mirrors>
 
-    <mirror>
-      <id>nexus</id>
-      <name>NEXUS</name>
-      <url>http://localhost:8081/repository/maven-public</url>
-      <mirrorOf>*</mirrorOf>
-    </mirror>
-
-<!--<mirror>
+    <!--
+	 <mirror>
       <id>public</id>
       <name>PlanetMirror Australia</name>
       <url>https://repo.maven.apache.org/maven2</url>
-      <mirrorOf>central</mirrorOf>
-    </mirror>
--->
+      <mirrorOf>external:*</mirrorOf>
+    </mirror> --> 
+
   </mirrors>
-  <activeProfiles>
-    <!--make the profile active all the time -->
-<activeProfile>nexus</activeProfile>
-  </activeProfiles>
+
   <profiles>
   </profiles>
 
@@ -33,7 +24,7 @@
 
   <servers>
     <server>
-      <id>nexus</id>
+      <id>maven-snapshots</id>
       <username>admin</username>
       <password>admin123</password>
     </server>
